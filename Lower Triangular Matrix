@@ -1,0 +1,49 @@
+Lower Triangular Matrix
+
+write a program to find Lower Triangular Matrix using 2D.
+
+Sample Input:
+3
+1 0 0
+4 5 0
+1 0 0
+
+Sample Output:
+Lower triangular matrix
+
+//code here
+import java.util.Scanner;
+public class Lower
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int k=0;
+        int n=sc.nextInt();
+        int c[][]=new int[n][n];
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+            c[i][j]=sc.nextInt();
+            }
+        }
+        for(int i=0;i<n;i++)
+        for(int j=0;j<n;j++)
+        if(c[i][j]==0)
+          k=0;
+          else
+          k=1;
+         if(k==0)
+         {
+             System.out.println("Lower triangular Matrix");
+         }
+         else
+         {
+             System.out.println("Not a Lower triangular Matrix");
+         }
+            
+        
+    }
+}
+
