@@ -1,0 +1,27 @@
+Reversed Strings
+Requested files: Reverse.java (Download)
+Maximum number of files: 5
+Type of work: Individual work
+Complete the solution so that it reverses the string passed into it.
+
+'world'  =>  'dlrow'
+'word'   =>  'drow'
+Sample Input:
+hello
+Sample Output: 
+olleh
+
+//Code here
+import java.util.*;
+public class Reverse{
+    public static void main(String args[]){
+        String initial, rev="";
+Scanner in=new Scanner(System.in);
+//System.out.println("Enter the string to reverse");
+initial=in.nextLine();
+int length=initial.length();
+for(int i=length-1;i>=0;i--)
+  rev=rev+initial.charAt(i);
+System.out.println(""+rev);
+}
+}
