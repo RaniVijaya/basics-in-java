@@ -1,0 +1,46 @@
+Lets play Cricket
+
+
+Sample input: 
+
+enter the number of matches played
+
+150
+
+enter the number innings batted
+
+36
+
+enter number of times notout
+
+32
+
+enter runs scored
+
+1000
+
+Sample Output
+
+
+batting average=250.0
+
+import java.util.*;
+public class Cricket
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int a,b,c,d;
+        
+        System.out.println("enter the number of matches played");
+        a=sc.nextInt();
+        System.out.println("enter the number innings batted");
+        b=sc.nextInt();
+        System.out.println("enter number of times notout");
+        c=sc.nextInt();
+        System.out.println("enter runs scored");
+        d=sc.nextInt();
+        float s=d/(b-c);
+        System.out.printf("batting average=%.1f",s);
+    }
+}
