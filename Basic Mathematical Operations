@@ -1,0 +1,54 @@
+Basic Mathematical Operations
+
+Your task is to create a function that does four basic mathematical operations.
+The function should take three arguments - operation(string/char), value1(number), value2(number).
+The function should return the result of numbers after applying the chosen operation.
+Examples(Operator, value1, value2) --> output
+Sample Input-1
++
+4
+7
+Sample Output-1
+11
+Sample Input-2
+-
+15
+18
+Sample Output-2
+3
+
+//Code here
+import java.util.Scanner;
+public class Basicmath
+{
+    public static double Maths(String symbol, double a, double b)
+    {
+        double n=0;
+        switch(symbol)
+        {
+            case "+":
+                n=a+b;
+                break;
+            case "-":
+                n=a-b;
+                break;
+            case "*":
+                n=a*b;
+                break;
+            case "/":
+                n=a/b;
+                break;
+        }
+        return n;
+        //Write your code here
+        }
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String symbol=sc.nextLine();
+        double a = sc.nextInt();
+        double b = sc.nextInt();
+        double c= Maths(symbol,a,b);
+        System.out.println(c);
+    }
+}
