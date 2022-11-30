@@ -1,0 +1,40 @@
+sum of two numbers-L1
+
+Define a function which can compute the sum of two numbers using recursion.
+
+sample input:
+
+4
+
+8
+
+Sample output:
+
+12
+
+import java.util.*;
+ public class sotn
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int a,b;
+        a=sc.nextInt();
+        b=sc.nextInt();
+       
+       System.out.println(+sum(a,b)); 
+       
+      //  s.Diff(a,b);
+        
+    }
+
+  
+  
+      static int sum(int a,int b)
+    {
+         if(b==0)
+		   return a;
+		 return sum(a, b-1)+1;
+  }
+    
+}
