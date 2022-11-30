@@ -1,0 +1,45 @@
+Perfect Square-L1
+
+
+Write a function which can store the perfect square values in a list. The user will define the range.
+
+
+Sample input:
+
+1
+
+20
+
+Sample output:
+
+4 9 16
+
+//Code here
+import java.util.*;
+ 
+public class perfectsquare {
+ 
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+       int n,m;
+       n=sc.nextInt();
+        m=sc.nextInt();
+       
+        int starting_number = n;
+        int ending_number = m;
+        
+       // System.out.println("Perfect Numbers between "+starting_number+ " and "+ending_number);
+        for (int i = starting_number+1; i <= ending_number; i++) {
+ 
+            int number = i;
+ 
+            int sqrt = (int) Math.sqrt(number);
+            if (sqrt * sqrt == number) {
+                System.out.println(number);
+            } 
+        }
+    }
+}
+
+
