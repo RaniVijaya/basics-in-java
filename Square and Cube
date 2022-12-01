@@ -1,0 +1,46 @@
+Square and Cube
+
+Write a java program to demonstrate example of hierarchical inheritance to get square and cube of a number
+
+Input Format
+
+First and Second lines consist of Integer values.
+
+Output Format
+
+Refer sample output format
+
+Sample Input:
+
+Enter an integer number: 23
+
+Enter an integer number: 89
+
+Sample Output:
+
+Square of 23 is: 529
+
+Cube  of 89 is: 704969
+
+import java.util.*;
+public class square
+{
+    public static void main(String[] args)
+    {
+    int a,b;
+    Scanner sc=new Scanner(System.in);
+    System.out.print("Enter an integer number: ");
+    a=sc.nextInt();
+    int c=a*a;
+    System.out.print("Square of "+ +a +" is: ");
+    System.out.println(c);
+    System.out.print("Enter an integer number: ");
+    b=sc.nextInt();
+    int d=b*b*b;
+    System.out.print("Cube of "+ +b +" is: ");
+    System.out.println(d);
+    
+    }
+    
+}
+
