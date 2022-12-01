@@ -1,0 +1,47 @@
+Question-3(2D-Array)
+
+Write a program to get store the User's data in a 2D array and print it.
+
+Sample Input: 
+
+Enter Elements1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+import java.util.Scanner;
+public class Storeprint{
+public static void main(String[] args)
+{
+int[][] twodArray = new int[3][3]; // declared and created array object
+Scanner s1 = new Scanner(System.in); //created Scanner object
+System.out.println("Enter Elements");
+for(int i = 0 ; i < 3 ; i++){
+for(int j = 0 ; j < 3; j++)
+{
+twodArray[i][j] = s1.nextInt();
+}
+}
+System.out.println("Printing Elements...");
+for(int i = 0 ; i < 3 ; i++){
+for(int j = 0 ; j < 3; j++)
+{
+System.out.print(twodArray[i][j] + " " );
+}
+System.out.println();
+}
+}
+}
