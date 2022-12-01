@@ -1,0 +1,70 @@
+Bank Account
+
+Define a class to represent a bank account. Include the following members: Data members: 1) Name of the depositor 2) Account number 3) Type of account 4) Balance amount in the account. Member functions: 1) To assign initial values 2) To deposit an amount 3) To withdraw an amount after checking the balance 4) To display name and balance. Write a java program to print the details of bank account.
+
+Input and Output Format
+
+Refer sample Input and Output
+
+Sample Input
+
+Enter Details:                                                                                                                                  
+
+Accout No: 1234                                                                                                                                 
+
+Name: Raj                                                                                                                                                                                                                      
+
+Account Type: Saving                                                                                                                                                                          
+
+Balance: 50000                
+
+Enter Deposit Amount = 14000                                                                                                                                                                                          
+
+Enter Withdraw Amount = 49000
+
+Sample Output                                                                                                                          
+
+Accout No: 1234                                                             
+
+Name: Raj                                                                                                                                       
+
+Account Type: Saving                                                                                                                            
+
+Balance: 15000
+import java.util.*;
+class Bank1
+{
+    public void display()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Details:");
+        System.out.print("Accout No: ");
+        int a=sc.nextInt();
+        System.out.print("Name: ");
+        String b=sc.next();
+        System.out.print("Account Type: ");
+        String c=sc.next();
+        System.out.print("Balance: ");
+        int d=sc.nextInt();
+        System.out.print("Enter Deposit Amount = ");
+        int e=sc.nextInt();
+        System.out.print("Enter Withdraw Amount = ");
+        int f=sc.nextInt();
+        int g=(d+e)-f;
+        System.out.println("Accout No: "+a);
+        System.out.println("Name: "+b);
+        System.out.println("Account Type: "+c);
+        System.out.println("Balance: "+g);
+        
+        
+    }
+}
+ class Bank extends Bank1
+ {
+     public static void main(String[] args)
+     {
+         Bank1 b=new Bank1();
+         b.display();
+     }
+ }
+
