@@ -1,0 +1,66 @@
+Question-2 (Array)
+Requested files: Array.java (Download)
+Maximum number of files: 5
+Type of work: Individual work
+Coding Question 2: Based on the Array
+Input: [2,1,0,-8,-9]
+Output: 0.4 , 0.2 , 0.4
+Explanation:
+
+First, find the total number of elements in the array = 5
+Find the total number of positive numbers=2
+Find the total number of neutral numbers=1
+(0 is the only neutral number)
+Find the total number of negative numbers=2
+Output = [ (no of positive number/length of the array), (no of neutral numbers/length of the array), (no of negative numbers/length of the array) ]
+=[⅖, ⅕, ⅖]
+=[0.4, 0.2, 0.4]
+Algorithm:
+
+Start the Program
+Get the input as an array
+Find the length of the array
+Find the number of positive, neutral, and negative numbers
+Divide each one of the above results with the length of the array and print the output as an array( Make sure you print the output in float format and use 0.1f for one precision)
+Stop the program
+
+
+//Boom here
+import java.util.Scanner;
+public class Array
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int count=0,sum=0,sub=0;
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        for(int i=0;i<n;i++)
+        {
+            if(a[i]>0)
+            {
+                count++;
+            }
+            else if(a[i]<0)
+            {
+                sum++;
+            }
+            else if(a[i]==0)
+            {
+                sub++;
+            }
+            else
+            {
+                System.out.println();
+            }
+        }
+        float d=(float)count/n;
+        float b=(float)sum/n;
+        float c=(float)sub/n;
+        System.out.println("[" +d+","+c+","+b+"]");
+    }
+}
