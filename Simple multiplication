@@ -1,0 +1,42 @@
+Simple multiplication
+
+This Question is about multiplying a given number by eight if it is an even number and by nine otherwise.
+
+INPUT 1:
+
+4
+
+OUTPUT 1:
+
+32
+
+INPUT 2:
+
+3
+
+OUTPUT 2:
+
+27
+
+import java.util.*;
+public class multiply{
+    public static int simpleMultiplication(int n)
+    {
+        int d;
+      if(n%2==0)
+      {
+           d=n*8;
+      }
+      else
+      {
+           d=n*9;
+      }
+      return d;
+    }
+    
+
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int a=sc.nextInt();
+System.out.println(simpleMultiplication(a));
+}}
