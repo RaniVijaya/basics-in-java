@@ -1,0 +1,45 @@
+Pattern-1
+
+
+Solve the pattern in dynamic:
+
+ 
+
+Sample input 1:
+
+5
+
+Sample output 1:
+
+*   *
+
+ * *
+
+  *
+
+ * *
+
+*   *
+
+//Proove your drawing skill here
+import java.util.Scanner;
+public class Apattern1
+{
+   public static void main(String []args)
+   {
+       Scanner sc=new Scanner(System.in);
+      int i, j, k,l;
+      l=sc.nextInt();
+      k=l*2-5;
+      for( i=1;i<=k;i++)
+      {
+         for( j=1;j<=k;j++)
+         {
+            if(j==i || j==k-i+1)
+               System.out.print("*");
+                System.out.print(" ");
+          }
+          System.out.println();
+      }
+   }
+}
