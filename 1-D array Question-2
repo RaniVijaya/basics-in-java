@@ -1,0 +1,96 @@
+1-D array Question-2
+
+Write a program that creates integer array of 10 elements, accepts values of arrays and Find Sum, Average, Min, Max.
+Sample Input: 
+
+Enter 10 array elements
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+Sample Output
+
+Array: 
+
+sum: 55
+
+min: 1
+
+max: 10
+
+average : 5.5
+
+//code here
+import java.util.*;
+public class Summinmax
+{
+    public static void main(String[] args)
+    {
+        
+        Scanner sc=new Scanner(System.in);
+        int n=10;
+      //  n=sc.nextInt();
+        int a[]=new int [n];
+        System.out.println("Enter 10 array elements");
+        for(int i=0;i<n;i++)
+        {
+        a[i]=sc.nextInt();
+        }
+        int sum=0;
+        for(int i=0;i<n;i++)
+        {
+            sum=sum+a[i];     
+        }
+        System.out.println("Array:");
+           System.out.print("sum: ");
+           System.out.printf("%d",sum);
+           System.out.println();
+           
+           int min=a[0];
+        for(int i=0;i<n;i++)
+        {
+            if(min>a[i])
+            {
+                min=a[i];
+            }
+        }
+        System.out.print("min: ");
+        System.out.printf("%d",min);
+        System.out.println();
+
+        int max=a[0];
+        for(int i=0;i<n;i++)
+        {
+            if(max<a[i])
+            {
+                max=a[i];
+            }
+        }
+        System.out.print("max: ");
+        System.out.printf("%d",max);
+        System.out.println();
+        
+        float avg;
+        avg=(float)sum/10;
+        System.out.print("average: ");
+        System.out.printf("%.1f",avg);
+}
+}
+  
