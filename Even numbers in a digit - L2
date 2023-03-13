@@ -1,0 +1,62 @@
+Write a program, which will find all such numbers between the user-given range (both included) such that each digit of the number is an even number.
+
+The numbers obtained should be printed in a comma-separated sequence on a single line.
+
+Input Format:
+The first input consists of an integer type to get starting value.
+The second input consists of an integer type to get the ending value.
+
+Output Format:
+The output consists of all even digit numbers from the given range separated by a comma. If the range is out of bound, print "Invalid Input".
+
+Constraints:
+1>=n,m<=5000
+
+Sample Input 1:
+81
+101
+
+Sample Output 1:
+82,84,86,88
+
+Sample Input 2:
+1
+11
+
+Sample Output 2:
+2,4,6,8
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class even {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+   // System.out.print("Enter the lower bound of the range: ");
+    int lowerBound = sc.nextInt();
+    //System.out.print("Enter the upper bound of the range: ");
+    int upperBound = sc.nextInt();
+    sc.close();
+
+    ArrayList<Integer> evenNumbers = new ArrayList<>();
+    for (int i = lowerBound; i <= upperBound; i++) {
+      if (isEven(i)) {
+        evenNumbers.add(i);
+      }
+    }
+
+    System.out.println(evenNumbers);
+  }
+
+  private static boolean isEven(int number) {
+    while (number > 0) {
+      int digit = number % 10;
+      if (digit % 2 != 0) {
+        return false;
+      }
+      number /= 10;
+    }
+    return true;
+  }
+}
+
