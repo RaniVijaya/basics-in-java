@@ -1,0 +1,38 @@
+Write a program that calculates and prints the value according to the given formula: Q = Square root of [(2 * C * D)/H]. Following are the fixed values of C and H: C is 50. H is 30. D is the variable whose values should be input to your program in a comma-separated sequence.
+
+Example
+
+Let us assume the following comma separated input sequence is given to the program:
+
+Input
+
+100
+
+150
+
+180
+
+output
+
+18 22 24
+
+
+import java.util.Scanner;
+
+public class complexequation {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        final int C = 50;
+        final int H = 30;
+
+     //   System.out.println("Enter a comma-separated sequence of D values: ");
+        String input = sc.nextLine();
+        String[] values = input.split(",");
+
+        for (String str : values) {
+            int D = Integer.parseInt(str);
+            double Q = Math.sqrt((2 * C * D) / H);
+            System.out.print(Q + " ");
+        }
+    }
+}
