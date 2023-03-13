@@ -1,0 +1,38 @@
+Write a program that accepts a sequence of comma-separated 4-digit binary numbers as its input and then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma-separated sequence
+
+input
+
+
+0100
+
+0011
+
+1010
+
+1001
+
+output
+
+1010
+  
+  
+//Code here
+import java.util.Scanner;
+
+public class binary {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+       // System.out.println("Enter 4-digit binary numbers separated by comma: ");
+        String binaryNumbers = sc.nextLine();
+        String[] binaryArray = binaryNumbers.split(",");
+
+       // System.out.print("Numbers divisible by 5: ");
+        for (String binary : binaryArray) {
+            int decimal = Integer.parseInt(binary, 2);
+            if (decimal % 5 == 0) {
+                System.out.print(binary + ",");
+            }
+        }
+    }
+}
